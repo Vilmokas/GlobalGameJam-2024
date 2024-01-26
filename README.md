@@ -1,4 +1,4 @@
-# Game for Global Game Jam 2023
+# Game for Global Game Jam 2024
 
 ![cover](tba)
 
@@ -10,4 +10,4 @@
 
 ## Trailer:
 
-[Global Game Jam 2023 - Game name](tba)
+[Global Game Jam 2024 - Game name](tba)
