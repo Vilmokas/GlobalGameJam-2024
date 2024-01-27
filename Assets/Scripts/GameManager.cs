@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     private Jester selectedJester = null;
     [SerializeField] private Vector3 oldJesterPosition = Vector3.zero;
     [SerializeField] private Transform performingJesterPosition;
+    [SerializeField] private TextMeshProUGUI selectedJesterCharismaText;
+    [SerializeField] private TextMeshProUGUI selectedJesterIntelligenceText;
+    [SerializeField] private TextMeshProUGUI selectedJesterStrengthText;
+    [SerializeField] private TextMeshProUGUI selectedJesterAgilityText;
 
     private Subject selectedSubject = null;
     [SerializeField] private Color newSubjectColor = Color.white;
@@ -52,6 +56,11 @@ public class GameManager : MonoBehaviour
         selectedJester = jester;
         oldJesterPosition = jester.transform.position;
         jester.transform.position = performingJesterPosition.position;
+
+        selectedJesterCharismaText.text = selectedJester.charisma.ToString();
+        selectedJesterIntelligenceText.text = selectedJester.intelligence.ToString();
+        selectedJesterStrengthText.text = selectedJester.strength.ToString();
+        selectedJesterAgilityText.text = selectedJester.agility.ToString();
     }
 
     public void SelectSubject(Subject subject)
@@ -77,17 +86,17 @@ public class GameManager : MonoBehaviour
             rollNeeded = selectedSubject.charisma;
             rollBonus = selectedJester.charisma;
         }
-        else if (selectedSubject.intelligence > rollNeeded)
+        if (selectedSubject.intelligence > rollNeeded)
         {
             rollNeeded = selectedSubject.intelligence;
             rollBonus = selectedJester.intelligence;
         }
-        else if (selectedSubject.strength > rollNeeded)
+        if (selectedSubject.strength > rollNeeded)
         {
             rollNeeded = selectedSubject.strength;
             rollBonus = selectedJester.strength;
         }
-        else
+        if (selectedSubject.agility > rollNeeded)
         {
             rollNeeded = selectedSubject.agility;
             rollBonus = selectedJester.agility;
