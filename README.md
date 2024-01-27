@@ -1,13 +1,13 @@
 # Game for Global Game Jam 2024
 
-![cover](tba)
+![cover](https://globalgamejam.org/s3/files/styles/sidebar_full/s3/games/2024/188007/featured/Screenshot_32.png?itok=pjsBjzLH)
 
-## Theme: tba
+## Theme: Make Me Laugh
 
 ## Game Page:
 
-[Game name](tba)
+[Don't Offend the King!](https://globalgamejam.org/games/2024/dont-offend-king-1)
 
 ## Trailer:
 
-[Global Game Jam 2024 - Game name](tba)
+[Global Game Jam 2024 - Don't Offend the King!](tba)
