@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,6 +35,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI diceText;
     [SerializeField] private TextMeshProUGUI rollNeededText;
     [SerializeField] private TextMeshProUGUI rollBonusText;
+
+    [SerializeField] private int laughsNeeded;
+    [SerializeField] private int laughsCurrent;
+    [SerializeField] private Slider laughMeter;
+    [SerializeField] private int jesterCount;
+
     public enum SubjectTypes
     {
         king,
@@ -45,6 +52,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+    private void Start()
+    {
+        laughMeter.maxValue = laughsNeeded;
+        laughMeter.value = 0;
     }
 
     public void SelectJester(Jester jester)
@@ -110,6 +123,26 @@ public class GameManager : MonoBehaviour
 
         diceText.text = newRollWithBonus.ToString();
 
-        Debug.Log(newRollWithBonus > rollNeeded ? "passed" : "failed");
+        if (newRollWithBonus > rollNeeded)
+        {
+            Debug.Log("pass");
+            laughsCurrent += 1;
+            laughMeter.value = laughsCurrent;
+            if (laughsCurrent >= laughsNeeded)
+            {
+                Debug.Log("level complete");
+            }
+        }
+        else
+        {
+            Debug.Log("fail");
+            Destroy(selectedJester.gameObject);
+            selectedJester = null;
+            jesterCount--;
+            if (jesterCount == 0)
+            {
+                Debug.Log("level failed");
+            }
+        }
     }
 }
