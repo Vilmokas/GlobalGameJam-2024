@@ -7,7 +7,8 @@
 ## Game Page:
 
 [Don't Offend the King!](https://globalgamejam.org/games/2024/dont-offend-king-1)
+[WEbGL version](https://vilmokas.itch.io/dont-offend-the-king)
 
 ## Trailer:
 
-[Global Game Jam 2024 - Don't Offend the King!](tba)
+[Global Game Jam 2024 - Don't Offend the King!](https://youtu.be/idqyRtSabIQ)
