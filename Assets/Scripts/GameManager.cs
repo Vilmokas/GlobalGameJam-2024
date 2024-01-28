@@ -170,9 +170,21 @@ public class GameManager : MonoBehaviour
     IEnumerator HideJokePanel(int roll, bool fail)
     {
         gamePaused = true;
+        dice.SetActive(true);
+        diceText.text = UnityEngine.Random.Range(0, 21).ToString();
+        yield return new WaitForSeconds(0.05f);
+        diceText.text = UnityEngine.Random.Range(0, 21).ToString();
+        yield return new WaitForSeconds(0.05f);
+        diceText.text = UnityEngine.Random.Range(0, 21).ToString();
+        yield return new WaitForSeconds(0.1f);
+        diceText.text = UnityEngine.Random.Range(0, 21).ToString();
+        yield return new WaitForSeconds(0.1f);
+        diceText.text = UnityEngine.Random.Range(0, 21).ToString();
+        yield return new WaitForSeconds(0.2f);
+        diceText.text = UnityEngine.Random.Range(0, 21).ToString();
+        yield return new WaitForSeconds(0.2f);
 
         diceText.text = roll.ToString();
-        dice.SetActive(true);
         yield return new WaitForSeconds(3);
         dice.SetActive(false);
 
