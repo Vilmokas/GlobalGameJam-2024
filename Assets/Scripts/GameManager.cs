@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private SceneController sceneController;
 
+    [SerializeField] private GameObject spriteMask;
+
     public enum SubjectTypes
     {
         crown,
@@ -197,11 +199,13 @@ public class GameManager : MonoBehaviour
         {
             SoundController.Instance.PlayAudioClip(5);
             yield return new WaitForSeconds(1);
+            spriteMask.SetActive(true);
+            SoundController.Instance.PlayAudioClip(1);
+            yield return new WaitForSeconds(1);
             Destroy(selectedJester.gameObject);
             selectedJester = null;
             jesterCount--;
-
-            SoundController.Instance.PlayAudioClip(1);
+            spriteMask.SetActive(false);
 
             if (jesterCount == 0)
             {

@@ -566,12 +566,20 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4401887811892820360, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7275711477236919898, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7526156167923919660, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526156167923919660, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1909,9 +1917,17 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4401887811892820360, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7526156167923919660, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526156167923919660, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2636,6 +2652,89 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &992947390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992947391}
+  - component: {fileID: 992947392}
+  m_Layer: 0
+  m_Name: Sprite Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &992947391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992947390}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.3000002, y: 2.44, z: 0}
+  m_LocalScale: {x: 1.4540493, y: 1.5352316, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033842403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!331 &992947392
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992947390}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4bdf1616f03b47b45a6b8df36023a5ba, type: 3}
+  m_MaskAlphaCutoff: 0.287
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1024101594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +3047,7 @@ MonoBehaviour:
   jokePanel: {fileID: 7593658978562821756}
   jokeText: {fileID: 1346676270}
   sceneController: {fileID: 1765330790}
+  spriteMask: {fileID: 992947390}
   goodJokes:
   - The King's crown is so majestic; even the jewels blush in its presence!
   - The royal robes are so splendid; they make the court look like a runway for knights!
@@ -4759,6 +4859,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4401887811892820360, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7275711477236919898, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
@@ -4766,6 +4870,10 @@ PrefabInstance:
     - target: {fileID: 7526156167923919660, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_SortingOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526156167923919660, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5497,6 +5605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 992947391}
   - {fileID: 1468033126}
   - {fileID: 104233817}
   - {fileID: 529164736}
@@ -6175,11 +6284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3977268426190986014, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.61
+      value: -3.71
       objectReference: {fileID: 0}
     - target: {fileID: 3977268426190986014, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.023737073
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3977268426190986014, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6220,6 +6329,14 @@ PrefabInstance:
     - target: {fileID: 4401887811892820360, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401887811892820360, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526156167923919660, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
