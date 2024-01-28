@@ -502,6 +502,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jester (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: agility
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: strength
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3977268426190986014, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7285488
@@ -586,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: strength
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: subjectType
@@ -751,7 +759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: charisma
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: subjectType
@@ -1825,6 +1833,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jester (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: agility
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: strength
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: intelligence
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3977268426190986014, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.77
@@ -2702,7 +2722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: agility
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: subjectType
@@ -2796,7 +2816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: intelligence
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -2900,6 +2920,7 @@ MonoBehaviour:
   selectedJesterStrengthText: {fileID: 1151988558}
   selectedJesterAgilityText: {fileID: 327719414}
   newSubjectColor: {r: 0, g: 0, b: 0, a: 1}
+  performingItemPosition: {fileID: 2143067935}
   diceText: {fileID: 2005934827}
   rollNeededText: {fileID: 1665925059}
   rollBonusText: {fileID: 888577863}
@@ -3176,7 +3197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: strength
-      value: 15
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: subjectType
@@ -3911,7 +3932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: intelligence
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -4207,7 +4228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: strength
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: subjectType
@@ -4661,6 +4682,18 @@ PrefabInstance:
     - target: {fileID: 1586076984352156823, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_Name
       value: Jester (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: agility
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: strength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: intelligence
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3977268426190986014, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5475,7 +5508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: intelligence
-      value: 11
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -5792,6 +5825,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142482373}
   m_CullTransparentMesh: 1
+--- !u!1 &2143067934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2143067935}
+  m_Layer: 0
+  m_Name: PerformItemPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2143067935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143067934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.51, y: 0.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2144717557
 GameObject:
   m_ObjectHideFlags: 0
@@ -6067,6 +6131,22 @@ PrefabInstance:
     - target: {fileID: 1586076984352156823, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_Name
       value: Jester
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: agility
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: charisma
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: strength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808699587837972024, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
+      propertyPath: intelligence
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3977268426190986014, guid: 7ca657df7b6611540afbb1b70a5ed849, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6344,6 +6424,7 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1114591198}
   - {fileID: 1123237382}
+  - {fileID: 2143067935}
   - {fileID: 2033842403}
   - {fileID: 426459609}
   - {fileID: 1803979104}

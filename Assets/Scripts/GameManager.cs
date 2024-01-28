@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     private Subject selectedSubject = null;
     [SerializeField] private Color newSubjectColor = Color.white;
+    private Vector3 oldItemPosition = Vector3.zero;
+    [SerializeField] private Transform performingItemPosition;
 
     [SerializeField] private TextMeshProUGUI diceText;
     [SerializeField] private TextMeshProUGUI rollNeededText;
@@ -103,10 +105,11 @@ public class GameManager : MonoBehaviour
 
         if (selectedSubject != null)
         {
-            selectedSubject.ChangeSpriteColor();
+            selectedSubject.transform.position = oldItemPosition;
         }
         selectedSubject = subject;
-        selectedSubject.ChangeSpriteColor(newSubjectColor);
+        oldItemPosition = subject.transform.position;
+        if (subject.subjectType != SubjectTypes.crown) subject.transform.position = performingItemPosition.position;
 
         SoundController.Instance.PlayAudioClip(0);
     }
