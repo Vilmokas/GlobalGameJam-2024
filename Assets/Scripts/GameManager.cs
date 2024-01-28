@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
         flower,
     }
 
+    public List<String> Jokes;
+
     private void Awake()
     {
         _instance = this;
