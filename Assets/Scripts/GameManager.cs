@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI diceText;
     [SerializeField] private TextMeshProUGUI rollNeededText;
     [SerializeField] private TextMeshProUGUI rollBonusText;
+    [SerializeField] private GameObject dice;
 
     [SerializeField] private int laughsNeeded;
     [SerializeField] private int laughsCurrent;
@@ -61,6 +62,8 @@ public class GameManager : MonoBehaviour
     public List<String> goodJokes;
     public List<String> badJokes;
 
+    private bool gamePaused = false;
+
     private void Awake()
     {
         _instance = this;
@@ -74,6 +77,8 @@ public class GameManager : MonoBehaviour
 
     public void SelectJester(Jester jester)
     {
+        if (gamePaused) return;
+
         if (selectedJester != null)
         {
             selectedJester.transform.position = oldJesterPosition;
@@ -90,6 +95,8 @@ public class GameManager : MonoBehaviour
 
     public void SelectSubject(Subject subject)
     {
+        if (gamePaused) return;
+
         if (selectedSubject != null)
         {
             selectedSubject.ChangeSpriteColor();
@@ -100,6 +107,7 @@ public class GameManager : MonoBehaviour
 
     public void RollDice()
     {
+        if (gamePaused) return;
         if (selectedJester == null) return;
         if (selectedSubject == null) return;
 
@@ -133,28 +141,36 @@ public class GameManager : MonoBehaviour
         int newRoll = UnityEngine.Random.Range(0, 21);
         int newRollWithBonus = newRoll + rollBonus;
 
-        diceText.text = newRollWithBonus.ToString();
 
         if (newRollWithBonus > rollNeeded)
         {
             Debug.Log("pass");
             jokeText.text = goodJokes[(int)selectedSubject.subjectType];
-            StartCoroutine(HideJokePanel());
-
-            laughsCurrent += 1;
-            laughMeter.value = laughsCurrent;
-
-            if (laughsCurrent >= laughsNeeded)
-            {
-                Debug.Log("level complete");
-            }
+            StartCoroutine(HideJokePanel(newRollWithBonus, false));
         }
         else
         {
             Debug.Log("fail");
             jokeText.text = badJokes[(int)selectedSubject.subjectType];
-            StartCoroutine(HideJokePanel());
+            StartCoroutine(HideJokePanel(newRollWithBonus, true));
+        }
+    }
 
+    IEnumerator HideJokePanel(int roll, bool fail)
+    {
+        gamePaused = true;
+
+        diceText.text = roll.ToString();
+        dice.SetActive(true);
+        yield return new WaitForSeconds(3);
+        dice.SetActive(false);
+
+        jokePanel.SetActive(true);
+        yield return new WaitForSeconds(10);
+        jokePanel.SetActive(false);
+
+        if (fail)
+        {
             Destroy(selectedJester.gameObject);
             selectedJester = null;
             jesterCount--;
@@ -164,12 +180,23 @@ public class GameManager : MonoBehaviour
                 Debug.Log("level failed");
             }
         }
-    }
+        else
+        {
+            if (selectedSubject.subjectType != SubjectTypes.crown)
+            {
+                Destroy(selectedSubject.gameObject);
+                selectedSubject = null;
+            }
 
-    IEnumerator HideJokePanel()
-    {
-        jokePanel.SetActive(true);
-        yield return new WaitForSeconds(10);
-        jokePanel.SetActive(false);
+            laughsCurrent += 1;
+            laughMeter.value = laughsCurrent;
+
+            if (laughsCurrent >= laughsNeeded)
+            {
+                Debug.Log("level complete");
+            }
+        }
+
+        gamePaused = false;
     }
 }
