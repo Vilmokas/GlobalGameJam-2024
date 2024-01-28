@@ -5,7 +5,7 @@ using UnityEngine;
 public class Subject : MonoBehaviour
 {
     private Color originalColor;
-    [SerializeField] private GameManager.SubjectTypes subjectType;
+    [SerializeField] public GameManager.SubjectTypes subjectType;
     [SerializeField] public int charisma;
     [SerializeField] public int intelligence;
     [SerializeField] public int strength;

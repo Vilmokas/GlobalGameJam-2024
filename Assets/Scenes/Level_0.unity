@@ -387,6 +387,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -543,6 +547,10 @@ PrefabInstance:
     - target: {fileID: 643961318878676308, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -2164,6 +2172,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2245,6 +2257,10 @@ PrefabInstance:
     - target: {fileID: 643961318878676308, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -2355,39 +2371,42 @@ MonoBehaviour:
   laughsCurrent: 0
   laughMeter: {fileID: 984717739}
   jesterCount: 4
-  Jokes:
-  - "The King\u2019s crown is so heavy; it\u2019s the only thing in the kingdom that
-    looks down on the King!"
-  - 'The King''s crown is so majestic; even the jewels blush in its presence! '
-  - The royal robes are so tattered; even the scarecrows would decline a trade!
+  jokePanel: {fileID: 7593658978562821756}
+  jokeText: {fileID: 1346676270}
+  goodJokes:
+  - The King's crown is so majestic; even the jewels blush in its presence!
   - The royal robes are so splendid; they make the court look like a runway for knights!
-  - The royal scepter is so crooked; it's the only thing in the kingdom that can't
-    stand straight!
   - The royal scepter is so regal; even Gandalf would be envious of its magical aura!
-  - The castle walls are so old; they remember when the moat was just a puddle!
   - The castle walls are so sturdy; even the wind tries to take a detour around them!
-  - "The jester\u2019s hat is so floppy; it's in a constant argument with gravity!"
   - "The jester\u2019s hat is so whimsical; it has more tricks up its brim than the
     jester himself!"
-  - "The royal banquet table is so wobbly; it\u2019s like a dance floor for drunken
-    goblets!"
   - The royal banquet table is so grand; it could host a feast for dragons and still
     have room for dessert!
-  - "The royal herald\u2019s trumpet is so off-key; it can summon only tone-deaf
-    subjects!"
   - "The royal herald\u2019s trumpet is so melodic; even the minstrels take notes
     on its harmonious announcements!"
-  - The royal garden is so overgrown; the weeds have started charging rent!
   - The royal garden is so enchanting; even the flowers curtsy in the presence of
     the royal bees!
-  - The royal chalice is so tarnished; it thinks it's auditioning for a role in a
-    medieval horror story!
   - The royal chalice is so pristine; it sparkles more than the eyes of a knight
     in love!
-  - "The throne room tapestry is so faded; it\u2019s like a medieval Instagram filter
-    gone wrong!"
   - The throne room tapestry is so vibrant; even the ghosts of knights past admire
     its lively depiction!
+  badJokes:
+  - "The King\u2019s crown is so heavy; it\u2019s the only thing in the kingdom that
+    looks down on the King!"
+  - The royal robes are so tattered; even the scarecrows would decline a trade!
+  - The royal scepter is so crooked; it's the only thing in the kingdom that can't
+    stand straight!
+  - The castle walls are so old; they remember when the moat was just a puddle!
+  - "The jester\u2019s hat is so floppy; it's in a constant argument with gravity!"
+  - "The royal banquet table is so wobbly; it\u2019s like a dance floor for drunken
+    goblets!"
+  - "The royal herald\u2019s trumpet is so off-key; it can summon only tone-deaf
+    subjects!"
+  - The royal garden is so overgrown; the weeds have started charging rent!
+  - The royal chalice is so tarnished; it thinks it's auditioning for a role in a
+    medieval horror story!
+  - "The throne room tapestry is so faded; it\u2019s like a medieval Instagram filter
+    gone wrong!"
 --- !u!4 &1114591198
 Transform:
   m_ObjectHideFlags: 0
@@ -2616,6 +2635,10 @@ PrefabInstance:
     - target: {fileID: 643961318878676308, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_SortingOrder
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -3068,7 +3091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.11, y: 1.1000061}
+  m_AnchoredPosition: {x: 1.1100006, y: 1.1000061}
   m_SizeDelta: {x: -68.51, y: -72.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346676270
@@ -3272,6 +3295,10 @@ PrefabInstance:
     - target: {fileID: 643961318878676308, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_SortingOrder
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -3698,6 +3725,10 @@ PrefabInstance:
     - target: {fileID: 643961318878676308, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -4507,6 +4538,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4588,6 +4623,10 @@ PrefabInstance:
     - target: {fileID: 643961318878676308, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_SortingOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174055979171090860, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
+      propertyPath: subjectType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1737068349916609121, guid: 5637affb38608ca4e98944bbdfedd5aa, type: 3}
       propertyPath: m_Sprite
@@ -5101,6 +5140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Joke
       objectReference: {fileID: 0}
+    - target: {fileID: 7350487544537695973, guid: 656a42f8959000d428f2b1d4bc42659f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5112,6 +5155,11 @@ PrefabInstance:
 --- !u!224 &7593658978562821755 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6036272646048936801, guid: 656a42f8959000d428f2b1d4bc42659f, type: 3}
+  m_PrefabInstance: {fileID: 7593658978562821754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7593658978562821756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7350487544537695973, guid: 656a42f8959000d428f2b1d4bc42659f, type: 3}
   m_PrefabInstance: {fileID: 7593658978562821754}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

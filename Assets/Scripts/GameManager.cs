@@ -41,15 +41,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Slider laughMeter;
     [SerializeField] private int jesterCount;
 
+    [SerializeField] private GameObject jokePanel;
+    [SerializeField] private TextMeshProUGUI jokeText;
+
     public enum SubjectTypes
     {
-        king,
-        queen,
-        guard,
-        flower,
+        crown,
+        robes,
+        scepter,
+        walls,
+        jester,
+        banquet,
+        trumpet,
+        garden,
+        chalice,
+        tapestry
     }
 
-    public List<String> Jokes;
+    public List<String> goodJokes;
+    public List<String> badJokes;
 
     private void Awake()
     {
@@ -128,8 +138,12 @@ public class GameManager : MonoBehaviour
         if (newRollWithBonus > rollNeeded)
         {
             Debug.Log("pass");
+            jokeText.text = goodJokes[(int)selectedSubject.subjectType];
+            StartCoroutine(HideJokePanel());
+
             laughsCurrent += 1;
             laughMeter.value = laughsCurrent;
+
             if (laughsCurrent >= laughsNeeded)
             {
                 Debug.Log("level complete");
@@ -138,13 +152,24 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("fail");
+            jokeText.text = badJokes[(int)selectedSubject.subjectType];
+            StartCoroutine(HideJokePanel());
+
             Destroy(selectedJester.gameObject);
             selectedJester = null;
             jesterCount--;
+
             if (jesterCount == 0)
             {
                 Debug.Log("level failed");
             }
         }
+    }
+
+    IEnumerator HideJokePanel()
+    {
+        jokePanel.SetActive(true);
+        yield return new WaitForSeconds(10);
+        jokePanel.SetActive(false);
     }
 }
