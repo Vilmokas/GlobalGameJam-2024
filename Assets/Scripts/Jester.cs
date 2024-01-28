@@ -25,4 +25,9 @@ public class Jester : MonoBehaviour
     {
         GameManager.Instance.SelectJester(this);
     }
+
+    private void OnMouseEnter()
+    {
+        SoundController.Instance.PlayAudioClip(8);
+    }
 }

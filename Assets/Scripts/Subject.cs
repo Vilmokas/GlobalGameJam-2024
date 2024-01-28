@@ -30,4 +30,9 @@ public class Subject : MonoBehaviour
     {
         GameManager.Instance.SelectSubject(this);
     }
+
+    private void OnMouseEnter()
+    {
+        SoundController.Instance.PlayAudioClip(8);
+    }
 }
