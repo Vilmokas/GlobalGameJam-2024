@@ -174,11 +174,14 @@ public class GameManager : MonoBehaviour
         dice.SetActive(false);
 
         jokePanel.SetActive(true);
-        yield return new WaitForSeconds(10);
+        SoundController.Instance.PlayAudioClip(3);
+        yield return new WaitForSeconds(8);
         jokePanel.SetActive(false);
 
         if (fail)
         {
+            SoundController.Instance.PlayAudioClip(5);
+            yield return new WaitForSeconds(1);
             Destroy(selectedJester.gameObject);
             selectedJester = null;
             jesterCount--;
@@ -187,12 +190,16 @@ public class GameManager : MonoBehaviour
 
             if (jesterCount == 0)
             {
+                yield return new WaitForSeconds(0.5f);
                 Debug.Log("level failed");
+                SoundController.Instance.PlayAudioClip(7);
                 sceneController.ShowGameEndWindow(false);
             }
         }
         else
         {
+            SoundController.Instance.PlayAudioClip(4);
+
             if (selectedSubject.subjectType != SubjectTypes.crown)
             {
                 Destroy(selectedSubject.gameObject);
@@ -204,7 +211,9 @@ public class GameManager : MonoBehaviour
 
             if (laughsCurrent >= laughsNeeded)
             {
+                yield return new WaitForSeconds(0.5f);
                 Debug.Log("level complete");
+                SoundController.Instance.PlayAudioClip(6);
                 sceneController.ShowGameEndWindow(true);
             }
         }
