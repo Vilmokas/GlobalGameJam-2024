@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject jokePanel;
     [SerializeField] private TextMeshProUGUI jokeText;
 
+    [SerializeField] private SceneController sceneController;
+
     public enum SubjectTypes
     {
         crown,
@@ -178,6 +180,7 @@ public class GameManager : MonoBehaviour
             if (jesterCount == 0)
             {
                 Debug.Log("level failed");
+                sceneController.ShowGameEndWindow(false);
             }
         }
         else
@@ -194,6 +197,7 @@ public class GameManager : MonoBehaviour
             if (laughsCurrent >= laughsNeeded)
             {
                 Debug.Log("level complete");
+                sceneController.ShowGameEndWindow(true);
             }
         }
 
