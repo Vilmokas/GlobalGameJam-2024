@@ -93,6 +93,8 @@ public class GameManager : MonoBehaviour
         selectedJesterIntelligenceText.text = selectedJester.intelligence.ToString();
         selectedJesterStrengthText.text = selectedJester.strength.ToString();
         selectedJesterAgilityText.text = selectedJester.agility.ToString();
+
+        SoundController.Instance.PlayAudioClip(0);
     }
 
     public void SelectSubject(Subject subject)
@@ -105,6 +107,8 @@ public class GameManager : MonoBehaviour
         }
         selectedSubject = subject;
         selectedSubject.ChangeSpriteColor(newSubjectColor);
+
+        SoundController.Instance.PlayAudioClip(0);
     }
 
     public void RollDice()
@@ -143,6 +147,8 @@ public class GameManager : MonoBehaviour
         int newRoll = UnityEngine.Random.Range(0, 21);
         int newRollWithBonus = newRoll + rollBonus;
 
+        SoundController.Instance.PlayAudioClip(2);
+
 
         if (newRollWithBonus > rollNeeded)
         {
@@ -176,6 +182,8 @@ public class GameManager : MonoBehaviour
             Destroy(selectedJester.gameObject);
             selectedJester = null;
             jesterCount--;
+
+            SoundController.Instance.PlayAudioClip(1);
 
             if (jesterCount == 0)
             {
