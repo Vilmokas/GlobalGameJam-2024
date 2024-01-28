@@ -29,5 +29,12 @@ public class Jester : MonoBehaviour
     private void OnMouseEnter()
     {
         SoundController.Instance.PlayAudioClip(8);
+        transform.localScale *= 1.1f;
+    }
+
+    private void OnMouseExit()
+    {
+        transform.localScale /= 1.1f;
     }
 }
+

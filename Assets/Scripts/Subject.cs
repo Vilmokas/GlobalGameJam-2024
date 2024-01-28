@@ -34,5 +34,12 @@ public class Subject : MonoBehaviour
     private void OnMouseEnter()
     {
         SoundController.Instance.PlayAudioClip(8);
+        transform.localScale *= 1.5f;
+    }
+
+    private void OnMouseExit()
+    {
+
+        transform.localScale /= 1.5f;
     }
 }
